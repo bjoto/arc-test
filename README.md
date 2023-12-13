@@ -1,3 +1,2 @@
 # arc-test
 
-foo
