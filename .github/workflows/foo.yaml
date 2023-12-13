@@ -10,3 +10,4 @@ jobs:
     - run: echo "🎉 This job uses runner scale set runners!"
     - run: cat /proc/cpuinfo
     - run: cat /proc/meminfo
+    - run: sleep 10
