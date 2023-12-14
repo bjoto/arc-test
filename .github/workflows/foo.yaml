@@ -11,7 +11,6 @@ jobs:
     steps:
     - run: echo "🎉 This job uses runner scale set runners!"
     - run: lsb_release -a
-    - run: cat /etc/apt/sources.list.d/debian.sources
     - run: cat /proc/cpuinfo
     - run: cat /proc/meminfo
     - run: sleep 10
