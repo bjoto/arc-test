@@ -7,10 +7,12 @@ jobs:
     # You need to use the INSTALLATION_NAME from the previous step
     runs-on: arc-runner-set
     container:
-      image: ghcr.io/linux-riscv/pw-builder:latest
+      image: ubuntu:mantic
     steps:
     - run: echo "🎉 This job uses runner scale set runners!"
-    - run: lsb_release -a
+    - run: ls -l 
+    - run: df -h
+    - run: lscpu
     - run: cat /proc/cpuinfo
     - run: cat /proc/meminfo
     - run: sleep 10
