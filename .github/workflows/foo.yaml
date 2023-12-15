@@ -7,11 +7,16 @@ jobs:
     # You need to use the INSTALLATION_NAME from the previous step
     runs-on: arc-runner-set
     container:
-      image: ubuntu:mantic
+      image: ghcr.io/catthehacker/ubuntu:act-latest
     steps:
     - run: echo "🎉 This job uses runner scale set runners!"
-    - run: ls -l 
+    - run: pwd
     - run: df -h
+    - name: Configure git
+      run: |
+        git config --global --add safe.directory '*'
+    - name: Checkout git
+      uses: actions/checkout@v4
     - run: lscpu
     - run: cat /proc/cpuinfo
     - run: cat /proc/meminfo
