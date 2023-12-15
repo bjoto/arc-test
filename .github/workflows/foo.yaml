@@ -7,7 +7,7 @@ jobs:
     # You need to use the INSTALLATION_NAME from the previous step
     runs-on: arc-runner-set
     container:
-      image: ghcr.io/catthehacker/ubuntu:act-latest
+      image: ghcr.io/linux-riscv/pw-runner-multi:latest
     steps:
     - run: echo "🎉 This job uses runner scale set runners!"
     - run: pwd
