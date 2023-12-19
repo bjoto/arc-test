@@ -1,4 +1,9 @@
 name: Actions Runner Controller Demo
+
+defaults:
+  run:
+    shell: bash -leo pipefail {0}
+
 on:
   push:
 
@@ -20,4 +25,5 @@ jobs:
     - run: lscpu
     - run: cat /proc/cpuinfo
     - run: cat /proc/meminfo
+    - run: exit 5
     - run: sleep 10
